@@ -7,6 +7,7 @@
       <li class="items">仕事一覧</li>
       
       <li class="items">仕事を提案する</li>
+      <li class="items"><%= link_to "ユーザー情報の編集",edit_user_registration_path(current_user) %></li>
       <li class="items"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
     </ul>
   </div>
