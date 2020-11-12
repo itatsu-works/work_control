@@ -1,0 +1,13 @@
+<h5>アカウントの編集</h5>
+
+<%= form_with model: current_user, local: true do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name, autofocus: true %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+
+  <%= f.submit "アカウントの更新", class: 'btn' %>
+
+<% end %>
