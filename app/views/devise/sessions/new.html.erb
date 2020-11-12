@@ -1,0 +1,13 @@
+<h5>ユーザーログイン</h5>
+
+<%= form_with model:resource, as: resource_name, url: session_path(resource_name), local: true do |f| %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email, autofocus: true %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, autocomplete: "off" %>
+
+  <%= f.submit "ログイン", class: 'btn' %>
+
+<% end %>
