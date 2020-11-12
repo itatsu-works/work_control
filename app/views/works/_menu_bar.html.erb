@@ -5,8 +5,9 @@
   <div class="menu">
     <ul class="item">
       <li class="items">仕事一覧</li>
-      <li class="items">ログアウト</li>
+      
       <li class="items">仕事を提案する</li>
+      <li class="items"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
     </ul>
   </div>
 </div>

@@ -1,8 +1,11 @@
 <div class="current_user">
-  <ユーザー名> 
+  <%= current_user.name %> さん
 </div> 
 
 <%# 以下、所属するグループのリンクが並ぶように %>
+<div class="group-list-title">
+所属グループ一覧
+</div>
 <ul class="group-list">
   <li class="group-list-items">group1</li>
   <li class="group-list-items">group2</li>
