@@ -1,0 +1,10 @@
+<h1>新規グループ作成</h1>
+
+
+<%= form_with model: @group, locl: true do |f| %>
+
+  <%= f.label :hoge %>
+  <%= f.text_field :hoge, pllaceholder: 'Please input group name' %>
+
+  <%= f.submit %>
+<% end %>
