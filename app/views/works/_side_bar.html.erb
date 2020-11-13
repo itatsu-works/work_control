@@ -6,8 +6,6 @@
 <div class="group-list-title">
 所属グループ一覧
 </div>
-<ul class="group-list">
-  <li class="group-list-items">group1</li>
-  <li class="group-list-items">group2</li>
-  <li class="group-list-items">group3</li>
-</ul>
+  <% current_user.groups.each do |group| %>
+    <a href="#"><%= group.group_name %></a>
+  <% end %>
