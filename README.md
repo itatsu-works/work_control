@@ -15,7 +15,7 @@
 
 |   Column    |   Type    |               Options             |
 |-------------|-----------|-----------------------------------|
-|leader_id    |integer    |null:  false, foreign_key: true    |
+|user_id      |integer    |null:  false, foreign_key: true    |
 |group_name   |string     |null:  false                       |
 
 ### Association
