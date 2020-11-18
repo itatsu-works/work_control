@@ -2,7 +2,10 @@ class GroupsController < ApplicationController
   def new
     @group = Group.new
   end
-
+  def index
+   @group = Group.where(user_id: current_user.id)
+  end
+  
   def create
     @group = Group.new(group_params)
     if @group.save

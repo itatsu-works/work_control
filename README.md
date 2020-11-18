@@ -9,7 +9,8 @@
 |password     |string     |null:  false |
 
 ### Association
-- has_many  :user_groups
+- has_many  :groups,  through :user_groups
+- has_many  :works, through:  :user_works
 
 ## Groupsテーブル
 
@@ -19,7 +20,7 @@
 |group_name   |string     |null:  false                       |
 
 ### Association
-- has_many  :user_groups
+- has_many  :users, through:  :user_groups
 - has_many  :works
 
 ## User_Groupsテーブル
@@ -45,6 +46,7 @@
 ### Association
 - belongs_to  :groups
 - has_one :progresses
+- has_many  :user, through:  :user_works
 
 ## Progressesテーブル
 
@@ -54,4 +56,15 @@
 |work_progress|string     |                                   |
 
 ### Association
+- belongs_to  :works
+
+### User_worksテーブル
+
+|     Column    |   Type    |               Oprions             |
+|---------------|-----------|-----------------------------------|
+|user_id        |references |null:  false,  foreign_key:  true  |
+|work_id        |references |null:  false,  foreign_key:  true  |
+
+### Association
+- belongs_to  :users
 - belongs_to  :works

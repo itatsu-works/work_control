@@ -7,5 +7,7 @@
 所属グループ一覧
 </div>
   <% current_user.groups.each do |group| %>
-    <a href="#"><%= group.group_name %></a>
+  <div class="work-name">
+    <%= link_to group.group_name, group_works_path(group) %>
+  </div>
   <% end %>

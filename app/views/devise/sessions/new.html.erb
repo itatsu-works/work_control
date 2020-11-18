@@ -9,5 +9,8 @@
   <%= f.password_field :password, autocomplete: "off" %>
 
   <%= f.submit "ログイン", class: 'btn' %>
-
 <% end %>
+
+アカウントを持っていない方は
+<%= link_to "登録", new_user_registration_path %>
+してください。
