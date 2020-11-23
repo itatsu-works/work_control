@@ -6,11 +6,22 @@
     <%= render "groups/side_bar" %>
   </div>
 
-  <%= @group.group_name %>
+  <div class="group_name">
+    現在は<%= @group.group_name %>にいます。
+  </div>
   <%= link_to "仕事を登録する", new_group_work_path(params[:group_id]) %>
-  <div>
+  <div class="works-table">
     <% @works.each do |work|%>
-      <%= work.work_name %>
+    <div class="work">
+      タイトル:<%= work.work_name %>
+      期日:<%= work.deadline%>
+      内容:<%= work.contents%>
+      <ul>
+        <li>
+          <%= link_to "編集", edit_group_work_path(@group, work.id), method: :get %>
+          <%= link_to "削除", group_work_path(@group, work.id), method: :delete %>
+      </ul>
+    </div>
     <% end %>
   </div>
 </div>
