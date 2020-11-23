@@ -22,7 +22,7 @@ class WorksController < ApplicationController
     if work.destroy
       redirect_to group_works_path(@group)
     else
-      render :index
+      render root_path
     end
   end
 
