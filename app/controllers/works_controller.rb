@@ -1,6 +1,6 @@
 class WorksController < ApplicationController
   before_action :work_new, only:  [:index,:new]
-  before_action :find_params, only: [:index, :create, :edit]
+  before_action :find_params, only: [:index, :create, :edit, :update]
   def index
     @works = @group.works
   end
@@ -11,7 +11,7 @@ class WorksController < ApplicationController
   def create
     @work = @group.works.new(work_params)
     if @work.save
-      redirect_to root_path
+      redirect_to group_works_path(@group)
     else
       render :new
     end
@@ -19,7 +19,11 @@ class WorksController < ApplicationController
 
   def destroy
     work = Work.find(params[:id])
-    work.destroy
+    if work.destroy
+      redirect_to group_works_path(@group)
+    else
+      render :index
+    end
   end
 
   def edit
@@ -29,7 +33,7 @@ class WorksController < ApplicationController
   def update
     work = Work.find(params[:id])
     if work.update(work_params)
-      redirect_to root_path
+      redirect_to group_works_path(@group)
     else
       render :edit
     end
@@ -46,8 +50,5 @@ class WorksController < ApplicationController
   def work_params
     params.require(:work).permit(:contents, :deadline, :work_name).merge(group_id: params[:group_id])
   end
-  # def user_works_params
-  #   params.require(:user_work).permit(:user_id[]).merge(work_id: params[:work_id])
-  # end
 
 end
