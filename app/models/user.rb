@@ -9,4 +9,5 @@ class User < ApplicationRecord
   has_many :works,  through:  :user_works
 
   validates :name, presence:  true
+  validates :email, uniqueness: true
 end

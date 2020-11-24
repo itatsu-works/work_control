@@ -4,5 +4,4 @@ class Group < ApplicationRecord
   has_many :works, dependent: :destroy
 
   validates :group_name,  presence: true
-
 end

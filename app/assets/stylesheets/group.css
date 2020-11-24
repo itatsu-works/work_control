@@ -5,12 +5,18 @@
 .main_screen{
   width: calc(100vw - 250px);
 }
+
+.main-screen-notice{
+  font-size: 25px;
+  margin-top: 25%;
+  text-align: center;
+}
 /* メニューバーの記述 */
 .menu_bar{
   display: flex;
-  height: 120px;
+  height: 100px;
   width: 100vw;
-  background-color: rgba(128, 128, 128, 0.151);
+  background-color: rgba(128, 128, 128, 0.349);
 }
 .logo{
   width: 40%;
@@ -24,15 +30,23 @@
 }
 .item{
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
 }
 .items{
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
-  margin: 60px 5px 1px 5px;
-  padding: 10px 15px;
-  border: 3px solid black;
-  background-color: white;
+  margin: 0px 5px auto 5px;
+  padding: 5px 10px;
+}
+
+ul li a:hover{
+color: rgba(163, 37, 37, 0.603);
+border-bottom: 3px solid #9c6e3a79;
+}
+
+.items a{
+  text-decoration: none;
+  color: black;
 }
 
 /* メニューバーの記述ここまで */
@@ -65,8 +79,14 @@
   font-size: 18px;
   margin-left: 10px;
   text-decoration: none;
+  color: antiquewhite;
 }
+a:hover{
+  color: rgba(163, 37, 37, 0.603);
+  border-bottom: 3px solid #9c6e3a79;
+  }
 /* サイドバーここまで */
+
 
 li{
   list-style: none;

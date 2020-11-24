@@ -5,7 +5,12 @@ class Work < ApplicationRecord
 
   with_options presence:  true do
     validates :contents
-    validates :deadline
     validates :work_name
   end
+  validate :deadline_check
+
+  def deadline_check
+    errors.add(:deadline, "is already passed or is blank.") if deadline.blank? || deadline < Date.today
+  end
+  
 end
