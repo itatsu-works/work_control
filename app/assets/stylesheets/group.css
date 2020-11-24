@@ -45,7 +45,6 @@ border-bottom: 3px solid #9c6e3a79;
 }
 
 .items a{
-  text-decoration: none;
   color: black;
 }
 
@@ -78,7 +77,6 @@ border-bottom: 3px solid #9c6e3a79;
 .work-name a{
   font-size: 18px;
   margin-left: 10px;
-  text-decoration: none;
   color: antiquewhite;
 }
 a:hover{
@@ -88,6 +86,7 @@ a:hover{
 /* サイドバーここまで */
 
 
-li{
+a {
   list-style: none;
+  text-decoration: none;
 }
