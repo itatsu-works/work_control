@@ -20,7 +20,7 @@ class WorksController < ApplicationController
   def destroy
     work = Work.find(params[:id])
     if work.destroy
-      redirect_to group_works_path(@group)
+      redirect_to root_path
     else
       render root_path
     end

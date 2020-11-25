@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_18_063648) do
+ActiveRecord::Schema.define(version: 2020_11_18_053531) do
 
   create_table "groups", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id", null: false
     t.string "group_name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_groups_on_user_id"
   end
 
@@ -52,12 +52,12 @@ ActiveRecord::Schema.define(version: 2020_11_18_063648) do
   end
 
   create_table "works", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "group_id", null: false
     t.text "contents", null: false
     t.date "deadline", null: false
     t.string "work_name", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "group_id", null: false
     t.index ["group_id"], name: "index_works_on_group_id"
   end
 
