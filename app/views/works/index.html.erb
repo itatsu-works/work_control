@@ -9,6 +9,7 @@
   <div class="group_name">
     現在は<%= @group.group_name %>にいます。
   </div>
+  <%= link_to "グループを解散する", group_path(@group), method: :delete %>
   <%= link_to "仕事を登録する", new_group_work_path(params[:group_id]) %>
   <div class="works-table">
     <% @works.each do |work|%>
