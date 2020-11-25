@@ -5,5 +5,5 @@ class RemoveUserIdIdToGroups < ActiveRecord::Migration[6.0]
   
   def down
     add_column :groups, :user_id_id, :references
-  
+  end
 end
