@@ -1,0 +1,9 @@
+<% if @groups.blank?  %>
+  <div class="main-screen-notice">
+    <%= link_to "グループを登録してください", new_group_path %>
+  </div>
+  <% else %>
+  <div class="main-screen-notice">
+    左からグループを選択してください！
+  </div>
+<% end %>

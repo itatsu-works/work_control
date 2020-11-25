@@ -2,7 +2,11 @@ class GroupsController < ApplicationController
   def new
     @group = Group.new
   end
-
+  def index
+    @group = Group.where(user_id: current_user.id)
+    @groups = UserGroup.where(user_id: current_user.id)
+  end
+  
   def create
     @group = Group.new(group_params)
     if @group.save
@@ -11,6 +15,13 @@ class GroupsController < ApplicationController
       render :new
     end
   end
+
+  def destroy
+    group = Group.find(params[:id])
+    group.destroy
+    redirect_to root_path
+  end
+
 
   private
   

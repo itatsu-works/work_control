@@ -1,11 +1,28 @@
 <div class="menu_bar">
-  <%= render "menu_bar" %>
+  <%= render "groups/menu_bar" %>
 </div>
 <div class="wrapper">
   <div class="side_bar">
-    <%= render "side_bar" %>
+    <%= render "groups/side_bar" %>
   </div>
-  <div class="main_screen">
-    <%= render "main_screen" %>
+
+  <div class="group_name">
+    現在は<%= @group.group_name %>にいます。
+  </div>
+  <%= link_to "グループを解散する", group_path(@group), method: :delete %>
+  <%= link_to "仕事を登録する", new_group_work_path(params[:group_id]) %>
+  <div class="works-table">
+    <% @works.each do |work|%>
+    <div class="work">
+      タイトル:<%= work.work_name %>
+      期日:<%= work.deadline%>
+      内容:<%= work.contents%>
+      <ul>
+        <li>
+          <%= link_to "編集", edit_group_work_path(@group, work.id), method: :get %>
+          <%= link_to "削除", group_work_path(@group, work.id), method: :delete %>
+      </ul>
+    </div>
+    <% end %>
   </div>
 </div>

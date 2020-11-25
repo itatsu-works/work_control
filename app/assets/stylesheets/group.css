@@ -1,0 +1,92 @@
+.wrapper{
+  display: flex;
+  height: calc(100vh - 120px);
+}
+.main_screen{
+  width: calc(100vw - 250px);
+}
+
+.main-screen-notice{
+  font-size: 25px;
+  margin-top: 25%;
+  text-align: center;
+}
+/* メニューバーの記述 */
+.menu_bar{
+  display: flex;
+  height: 100px;
+  width: 100vw;
+  background-color: rgba(128, 128, 128, 0.349);
+}
+.logo{
+  width: 40%;
+  height: 120px;
+}
+.title{
+  font-size: 43px;
+}
+.menu{
+  width: 60%;
+}
+.item{
+  display: flex;
+  justify-content: flex-end;
+}
+.items{
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0px 5px auto 5px;
+  padding: 5px 10px;
+}
+
+ul li a:hover{
+color: rgba(163, 37, 37, 0.603);
+border-bottom: 3px solid #9c6e3a79;
+}
+
+.items a{
+  color: black;
+}
+
+/* メニューバーの記述ここまで */
+/* サイドバー */
+.side_bar{
+  width: 250px;
+  background-color: grey;
+  color: antiquewhite;
+}
+.current_user{
+  font-size: 25px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.group-list-title{
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  color: black;
+  margin: 20px 0px;
+}
+.group-list{
+  font-size: 20px;
+  margin-left: 15px;
+}
+.group-list-items{
+  margin-bottom: 7px;
+}
+.work-name a{
+  font-size: 18px;
+  margin-left: 10px;
+  color: antiquewhite;
+}
+a:hover{
+  color: rgba(163, 37, 37, 0.603);
+  border-bottom: 3px solid #9c6e3a79;
+  }
+/* サイドバーここまで */
+
+
+a {
+  list-style: none;
+  text-decoration: none;
+}
