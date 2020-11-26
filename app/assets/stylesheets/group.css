@@ -1,6 +1,8 @@
 .wrapper{
   display: flex;
   height: calc(100vh - 15vh);
+  border-top: 0px;
+  border-left: 0px;
 }
 .main_screen{
   width: calc(100vw - 17vw);
@@ -39,7 +41,6 @@
   padding: 5px 10px;
   list-style: none;
   text-decoration: none;
-  background-color: skyblue;
 }
 
 ul li a:hover{
