@@ -1,9 +1,9 @@
 .wrapper{
   display: flex;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 15vh);
 }
 .main_screen{
-  width: calc(100vw - 250px);
+  width: calc(100vw - 17vw);
 }
 
 .main-screen-notice{
@@ -14,13 +14,14 @@
 /* メニューバーの記述 */
 .menu_bar{
   display: flex;
-  height: 100px;
+  height: 15vh;
   width: 100vw;
   background-color: rgba(128, 128, 128, 0.349);
 }
 .logo{
-  width: 40px;
-  height: 90px;
+  width: 15%;
+  height: 90%;
+  background-color: rgb(59, 23, 158);
 }
 .title{
   font-size: 27px;
@@ -53,7 +54,7 @@ border-bottom: 3px solid #9c6e3a79;
 /* メニューバーの記述ここまで */
 /* サイドバー */
 .side_bar{
-  width: 250px;
+  width: 17vw;
   background-color: grey;
   color: antiquewhite;
 }
