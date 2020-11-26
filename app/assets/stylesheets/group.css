@@ -21,7 +21,6 @@
 .logo{
   width: 15%;
   height: 90%;
-  background-color: rgb(59, 23, 158);
 }
 .title{
   font-size: 27px;
@@ -40,6 +39,7 @@
   padding: 5px 10px;
   list-style: none;
   text-decoration: none;
+  background-color: skyblue;
 }
 
 ul li a:hover{
