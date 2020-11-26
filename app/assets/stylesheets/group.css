@@ -47,6 +47,10 @@ border-bottom: 3px solid #9c6e3a79;
 .items a{
   color: black;
 }
+ul li a {
+  list-style: none;
+  text-decoration: none;
+}
 
 /* メニューバーの記述ここまで */
 /* サイドバー */

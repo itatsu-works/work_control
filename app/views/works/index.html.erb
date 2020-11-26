@@ -18,10 +18,12 @@
       期日:<%= work.deadline%>
       内容:<%= work.contents%>
       <ul>
-        <li>
+        <li class="works-menu">
           <%= link_to "編集", edit_group_work_path(@group, work.id), method: :get %>
+        </li>
+        <li class="works-menu">
           <%= link_to "削除", group_work_path(@group, work.id), method: :delete %>
-      </ul>
+        </li>
     </div>
     <% end %>
   </div>
