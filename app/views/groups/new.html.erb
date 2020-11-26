@@ -6,9 +6,13 @@
   <%= f.label :group_name %>
   <%= f.text_field :group_name, pllaceholder: 'Please input group name' %>
 
-  <%= collection_check_boxes :group, :user_ids, User.where.not(id:current_user.id), :id, :name, include_hidden: false do |user|%>
-    <%= user.label { user.check_box + user.text }%>
-  <%end%>
+  <table border="0" >
+    <%= collection_check_boxes :group, :user_ids, User.where.not(id:current_user.id), :id, :name, include_hidden: false do |user|%>
+      <tr>
+        <td><%= user.label { user.check_box + user.text }%></td>
+      </tr>
+    <%end%>
+  </table>
   <input name="group[user_ids][]" type="hidden" value=<%= current_user.id %>>
 
  <%= f.submit %>

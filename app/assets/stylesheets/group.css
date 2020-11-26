@@ -81,7 +81,9 @@ border-bottom: 3px solid #9c6e3a79;
   margin-left: 10px;
   color: antiquewhite;
 }
+a:active,
 a:hover{
+  outline: 0;
   color: rgba(163, 37, 37, 0.603);
   border-bottom: 3px solid #9c6e3a79;
   }
