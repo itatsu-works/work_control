@@ -1,25 +1,37 @@
-<h3>新規登録</h3>
+<div class="contents">
+  <div class="container">
+    <h3>新規登録</h3>
+      <%= devise_error_messages! %>
+        <div class="input_form">
+          <%= form_with model: resource, as: resource_name, url: registration_path(resource_name), local: true do |f| %>
+            <div class="field">
+              <%= f.label :name %><br/>
+              <%= f.text_field :name, autofocus: true %>
+            </div>
 
-<div class="input_form">
-  <%= form_with model: resource, as: resource_name, url: registration_path(resource_name), local: true do |f| %>
-    <div class="input">
-      <%= f.label :name %>
-      <%= f.text_field :name, autofocus: true %>
-    </div>
-    <div class="input">
-      <%= f.label :email %>
-      <%= f.email_field :email %>
-    </div>
-    <div class="input">
-      <%= f.label :password %>
-      <%= f.password_field :password, autocomplete: "off" %>
-    </div>
-    <div class="input">
-      <%= f.label :password_confirmation %>
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
-    </div>
-    <%= f.submit "アカウントを作成する", class: 'btn' %>
+            <div class="field">
+              <%= f.label :email %><br/>
+              <%= f.email_field :email %>
+            </div>
 
-  <% end %>
+            <div class="field">
+              <%= f.label :password %><br/>
+              <%= f.password_field :password, autocomplete: "off" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :password_confirmation %><br/>
+              <%= f.password_field :password_confirmation, autocomplete: "off" %>
+            </div>
+
+            <div class="btn">
+              <%= f.submit "アカウントを作成する", class: 'btn' %>
+            </div>
+
+          <% end %>
+        </div>
+    <div class="link_login">
+     アカウントを持っている方は<%= link_to "ログイン", new_user_session_path %>
+    </div>
+  </div>
 </div>
-アカウントを持っている方は<%= link_to "ログイン", new_user_session_path %>

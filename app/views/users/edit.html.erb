@@ -1,13 +1,22 @@
-<h5>アカウントの編集</h5>
+<div class="container">
+<h3>アカウントの編集</h3>
 
-<%= form_with model: current_user, local: true do |f| %>
+  <div class="user-info-edit">
+    <%= form_with model: current_user, local: true do |f| %>
+      <div class="field">
+        <%= f.label :name %><br/>
+        <%= f.text_field :name, autofocus: true %>
+      </div>
 
-  <%= f.label :name %>
-  <%= f.text_field :name, autofocus: true %>
+      <div class="field">
+        <%= f.label :email %><br/>
+        <%= f.email_field :email %>
+      </div>
 
-  <%= f.label :email %>
-  <%= f.email_field :email %>
+      <div class="btn">
+        <%= f.submit "アカウントの更新", class: 'btn' %>
+      </div>
 
-  <%= f.submit "アカウントの更新", class: 'btn' %>
-
-<% end %>
+    <% end %>
+  </div>
+</div>

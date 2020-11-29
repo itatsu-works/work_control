@@ -96,3 +96,12 @@ a {
   list-style: none;
   text-decoration: none;
 }
+
+/* 新規グループ作成画面 ここから */
+.group-submit-form div,
+.btn,
+.user-name-select {
+  margin-top: 10px;
+}
+
+/* 新規グループ作成画面 ここまで */

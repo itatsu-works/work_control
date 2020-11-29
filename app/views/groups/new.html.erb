@@ -1,21 +1,31 @@
-<h1>新規グループ作成</h1>
+<div class="contents">
+  <div class="container">
+    <h3>新規グループ作成</h3>
 
+    <div class="group-sumit-form">
+      <%= form_with model: @group, local: true do |f| %>
 
-<%= form_with model: @group, local: true do |f| %>
-
-  <%= f.label :group_name %>
-  <%= f.text_field :group_name, pllaceholder: 'Please input group name' %>
-
-  <table border="0" >
-    <%= collection_check_boxes :group, :user_ids, User.where.not(id:current_user.id), :id, :name, include_hidden: false do |user|%>
-      <tr>
-        <td><%= user.label { user.check_box + user.text }%></td>
-      </tr>
-    <%end%>
-  </table>
-  <input name="group[user_ids][]" type="hidden" value=<%= current_user.id %>>
-
- <%= f.submit %>
-<% end %>
-
+        <div class="field">
+          <%= f.label :group_name %>
+          <%= f.text_field :group_name, pllaceholder: 'Please input group name' %>
+        </div>
+        <div class="field">
+          <table border="0" >
+            <%= collection_check_boxes :group, :user_ids, User.where.not(id:current_user.id), :id, :name, include_hidden: false do |user|%>
+              <tr>
+                <div class="user-name-select">
+                <td><%= user.label { user.check_box + user.text }%></td>
+                </div>
+              </tr>
+            <%end%>
+          </table>
+        </div>
+        <input name="group[user_ids][]" type="hidden" value=<%= current_user.id %>>
+        <div class="btn">
+          <%= f.submit %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
 
