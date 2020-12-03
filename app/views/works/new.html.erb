@@ -1,22 +1,25 @@
-<h1>仕事登録画面</h1>
+<div class="container">
+  <h3>仕事登録画面</h3>
 
-<%= form_with model: @work, url: group_works_path, local: true do |f| %>
+  <%= form_with model: @work, url: group_works_path, local: true do |f| %>
 
-  <div class="work_name">
-    <%= f.label :work_name %>
-    <%= f.text_field :work_name, placeholder: 'Please input work name' %>
-  </div>
-  <div class="deadline">
-    <%= f.label :deadline %>
-    <%= f.date_field :deadline %>
-  </div>
-  <div class="contents">
-    <%= f.label :contents %>
-    <%= f.text_area :contents %>
-  </div>
-  
-  
+    <div class="field">
+      <%= f.label :work_name %><br/>
+      <%= f.text_field :work_name, placeholder: 'Please input work name' %>
+    </div>
 
-  <%= f.submit %>
-
-<% end %>
+    <div class="field">
+      <%= f.label :deadline %><br/>
+      <%= f.date_field :deadline %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :contents %><br/>
+      <%= f.text_area :contents %>
+    </div>
+    
+    <div class="btn">
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>

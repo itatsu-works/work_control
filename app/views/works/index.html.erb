@@ -5,30 +5,33 @@
   <div class="side_bar">
     <%= render "groups/side_bar" %>
   </div>
-
-  <div class="group_name">
-    現在は<%= @group.group_name %>にいます。
-  </div>
-  <%= link_to "グループを解散する", group_path(@group), method: :delete %>
-  <%= link_to "仕事を登録する", new_group_work_path(params[:group_id]) %>
-  <div class="works-table">
-    <table border="0" >
-      <tr>
-        <th>仕事名</th>
-        <th>期日</th>
-        <th>仕事内容</th>
-      </tr>
-      <% @works.each do |work|%>
-        <div class="work">
-          <tr>
-            <td><%= work.work_name %></td>
-            <td><%= work.deadline%></td>
-            <td><%= work.contents%></td>
-            <td><%= link_to "編集", edit_group_work_path(@group, work.id), method: :get %></td>
-            <td><%= link_to "削除", group_work_path(@group, work.id), method: :delete %></td>
-          </tr>
-        </div>
-      <% end %>
-    </table>
+  <div class="works-main-screen">
+    <div class="group_name">
+      現在は  <%= @group.group_name %>  にいます。
+    </div>
+    <div class="menu-btn">
+      <%= link_to "グループを解散する", group_path(@group), method: :delete %>
+      <%= link_to "仕事を登録する", new_group_work_path(params[:group_id]) %>
+    </div>
+    <div class="work-table" >
+      <table border="0" width="1000" >
+        <tr>
+          <th>仕事名</th>
+          <th>期日</th>
+          <th>仕事内容</th>
+        </tr><br/>
+        <% @works.each do |work|%>
+          <div class="work">
+            <tr>
+              <td><%= work.work_name %></td>
+              <td><%= work.deadline%></td>
+              <td><%= work.contents%></td>
+              <td><%= link_to "編集", edit_group_work_path(@group, work.id), method: :get %></td>
+              <td><%= link_to "削除", group_work_path(@group, work.id), method: :delete %></td>
+            </tr>
+          </div>
+        <% end %>
+      </table>
+    </div>
   </div>
 </div>
