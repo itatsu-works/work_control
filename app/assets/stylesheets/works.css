@@ -15,16 +15,15 @@ ul li a {
  {
   font-size: 30px;
   margin-bottom: 15px;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 .menu-btn a{
   color: black;
-  border: rgba(128, 128, 128, 0.39) solid ;
-  background-color:rgba(187, 185, 185, 0.89);
-  padding: 2px;
+  margin-right: 20px;
+  border: gray solid ;
+  padding: 5px;
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
   box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
-  margin-right: 20px;
   border-radius: 0.5rem;
 }
 
