@@ -51,7 +51,10 @@ border-bottom: 3px solid #9c6e3a79;
 .items a{
   color: black;
 }
-
+.icon {
+  height: 15vh;
+  width: 15vw;
+}
 /* メニューバーの記述ここまで */
 /* サイドバー */
 .side_bar{

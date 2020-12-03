@@ -8,10 +8,10 @@
   <div class="works-main-screen">
     <div class="group_name">
       現在は  <%= @group.group_name %>  にいます。
-    </div>
-    <div class="menu-btn">
-      <%= link_to "グループを解散する", group_path(@group), method: :delete %>
-      <%= link_to "仕事を登録する", new_group_work_path(params[:group_id]) %>
+      <div class="menu-btn">
+        <%= link_to "グループを解散する", group_path(@group), method: :delete %>
+        <%= link_to "仕事を登録する", new_group_work_path(params[:group_id]) %>
+      </div>
     </div>
     <div class="work-table" >
       <table border="0" width="1000" >
