@@ -2,7 +2,7 @@ class WorksController < ApplicationController
   before_action :work_new, only:  [:index,:new]
   before_action :find_params, only: [:index, :create, :edit, :update]
   def index
-    @works = @group.works
+    @works = @group.works.where.not(progress: 100).order(deadline: "ASC")
   end
 
   def new
@@ -39,6 +39,10 @@ class WorksController < ApplicationController
     end
   end
 
+  def show
+    @work = Work.find(params[:id])
+  end
+
   private
 
   def work_new
@@ -48,7 +52,7 @@ class WorksController < ApplicationController
     @group = Group.find(params[:group_id])
   end
   def work_params
-    params.require(:work).permit(:contents, :deadline, :work_name).merge(group_id: params[:group_id])
+    params.require(:work).permit(:contents, :deadline, :work_name, :progress).merge(group_id: params[:group_id])
   end
 
 end

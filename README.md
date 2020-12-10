@@ -127,21 +127,13 @@ E-mail:test@gmial.com<br>
 |deadline     |time       |null:  false                       |
 |contents     |text       |null:  false                       |
 |group_id     |references |null:  false,  foreign_key:  true  |
+|progress     |integer    |null:false
 
 ### Association
 - belongs_to  :groups
 - has_one :progresses
 - has_many  :user, through:  :user_works
 
-## Progressesテーブル
-
-|   Column    |   Type    |               Options             |
-|-------------|-----------|-----------------------------------|
-|work_id      |references |null:  false,  foreign_key:  true  |
-|work_progress|string     |                                   |
-
-### Association
-- belongs_to  :works
 
 ### User_worksテーブル
 

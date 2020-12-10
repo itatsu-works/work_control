@@ -1,0 +1,17 @@
+<div class="menu_bar">
+  <%= render "groups/menu_bar" %>
+</div>
+<div class="wrapper">
+  <div class="side_bar">
+    <%= render "groups/side_bar" %>
+  </div>
+
+  <div class="works-contents">
+    <div class="works-contents-screen">
+      仕事名:<%= @work.work_name %></br>
+      期日:<%= @work.deadline %></br>
+      仕事内容:<%= @work.contents %></br>
+      進捗状況:<%= link_to @work.progress,edit_group_work_path(@work.id),method: :get %>%
+    </div>
+  </div>
+</div>
