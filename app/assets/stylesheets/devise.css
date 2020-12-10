@@ -1,28 +1,35 @@
 .container {
-  margin: 20px 40px;
-  padding: 30px;
+  width: 65vw;
+  height: 40vw;
+  padding: 10vh 10vw;
   box-shadow: 0 0 10px rgba(41, 41, 41, 0.2);
-  background-color: white;
   box-sizing: border-box;
   flex-direction: column;
   align-items: center;
+  position: absolute;
+  top: 15vh;
+  left: 17.5vw;
+  background-image: url("calendar.jpg");
 }
 .container h3 {
-  margin: 0 0 20px;
+  margin: 0 0 30px;
   text-align: center;
   font-weight: normal;
-  font-size: 25px;
-  color: #666;
+  font-size: 30px;
+  color: black;
+  font-weight: bold;
 }
 
 .container{
   display: flex;
 }
 .input_form div .btn {
-  margin-top: 10px;
-}
-.link_login, .link_submit {
   margin-top: 15px;
 }
+.link_login, .link_submit {
+  margin-top: 20px;
+  font-weight: bold;
+}
 
 
+  
