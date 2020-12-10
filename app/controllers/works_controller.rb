@@ -1,6 +1,6 @@
 class WorksController < ApplicationController
   before_action :work_new, only:  [:index,:new]
-  before_action :find_params, only: [:index, :create, :edit, :update]
+  before_action :find_params, only: [:index, :create, :update]
   def index
     @works = @group.works.where.not(progress: 100).order(deadline: "ASC")
   end
