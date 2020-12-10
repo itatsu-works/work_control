@@ -6,7 +6,6 @@ class User < ApplicationRecord
 
   has_many :user_groups
   has_many :groups,  through: :user_groups
-  has_many :works,  through:  :user_works
 
   validates :name, presence:  true
   validates :email, uniqueness: true

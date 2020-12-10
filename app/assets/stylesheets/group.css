@@ -18,7 +18,7 @@
   display: flex;
   height: 15vh;
   width: 100vw;
-  background-color: rgba(128, 128, 128, 0.349);
+  background-color: white
 }
 .logo{
   width: 15%;
@@ -44,7 +44,7 @@
 }
 
 ul li a:hover{
-color: rgba(163, 37, 37, 0.603);
+color: rgba(103, 121, 143, 0.199);
 border-bottom: 3px solid #9c6e3a79;
 }
 
@@ -59,8 +59,8 @@ border-bottom: 3px solid #9c6e3a79;
 /* サイドバー */
 .side_bar{
   width: 17vw;
-  background-color: grey;
-  color: antiquewhite;
+  background-color: rgba(122, 144, 165, 0.3);
+  color: gray;
 }
 .current_user{
   font-size: 25px;
@@ -84,7 +84,7 @@ border-bottom: 3px solid #9c6e3a79;
 .work-name a{
   font-size: 18px;
   margin-left: 10px;
-  color: antiquewhite;
+  color: gray;
 }
 a:active,
 a:hover{

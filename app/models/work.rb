@@ -1,12 +1,13 @@
 class Work < ApplicationRecord
   belongs_to :group, optional: true
-  has_many  :users, through: :user_works
-
 
   with_options presence:  true do
     validates :contents
     validates :work_name
+    validates :progress
   end
+
+  validates :progress, numericality: { only_integer: true, greater_than_or_equal_to: 0, less_than_or_equal_to:100 }
   validate :deadline_check
 
   def deadline_check
