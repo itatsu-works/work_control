@@ -10,12 +10,13 @@
     <div class="works-contents-screen">
       仕事名:<%= @work.work_name %></br>
       期日:<%= @work.deadline %></br>
-      進捗状況:<%= link_to @work.progress,edit_group_work_path(@work.id) %>%</br>
+      進捗状況:<%= link_to @work.progress, edit_group_work_path(params[:id]) %>%</br>
       仕事内容:
       <%= @work.contents %></br>
-      
     </div>
-    <%# <%= link_to "編集する",edit_group_work_path(@work.id) %>
-    <%# <%= link_to "削除する",group_work_path(@work.id),method: :delete %> 
+    <div class="btn">
+      <%= link_to "編集する", edit_group_work_path(@work.id) %>
+      <%= link_to "削除する", group_work_path(@work.id), method: :delete %> 
+    </div>
   </div>
 </div>
