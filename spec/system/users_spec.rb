@@ -18,7 +18,7 @@ RSpec.describe "ユーザー新規登録", type: :system do
       fill_in 'Name', with: @user.name
       fill_in 'Email', with: @user.email
       fill_in 'Password', with: @user.password
-      fill_in 'Password confirmation', with: @user.passwordconfirmation
+      fill_in 'Password confirmation', with: @user.password_confirmation
       #"Create Account"ボタンを押す。
       #トップページへ遷移する
       #ログアウトボタンが表示されることを確認する。
