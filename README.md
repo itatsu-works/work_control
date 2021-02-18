@@ -6,9 +6,14 @@ Work Control
 
 # URL
 https://work-control.herokuapp.com
+
+# BASIC認証
+ID:admin
+Password:2222
+
 # テスト用アカウント
 Name:test<br>
-E-mail:test@gmial.com<br>
+E-mail:test@gmail.com<br>
 
 # 利用方法
 ### ユーザー登録・ログアウト
