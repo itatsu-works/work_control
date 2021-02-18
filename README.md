@@ -8,12 +8,12 @@ Work Control
 https://work-control.herokuapp.com
 
 # BASIC認証
-ID:admin
+ID:admin<br>
 Password:2222
 
 # テスト用アカウント
-Name:test<br>
 E-mail:test@gmail.com<br>
+password:123abc
 
 # 利用方法
 ### ユーザー登録・ログアウト
